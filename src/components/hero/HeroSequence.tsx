@@ -284,7 +284,7 @@ function HeroScroll() {
           <div aria-hidden className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-ink/80 to-transparent" />
 
           {/* Fase-HUD */}
-          <div className="absolute inset-x-4 bottom-[max(1.25rem,env(safe-area-inset-bottom))] flex items-end justify-between gap-4 sm:inset-x-6 lg:bottom-6">
+          <div className="absolute inset-x-4 bottom-[calc(max(1.25rem,env(safe-area-inset-bottom))+100lvh-100svh)] flex items-end justify-between gap-4 sm:inset-x-6 lg:bottom-6">
             <div className="min-w-0">
               <p className="eyebrow flex items-center gap-2 text-white/60">
                 <span className="text-brune">Fase</span>
