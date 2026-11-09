@@ -1,5 +1,5 @@
 /**
- * Werkzaamheden — gebaseerd op de diensten op www.wegenbouw-brune.nl ("Wat doen wij?").
+ * Werkzaamheden — demo-inhoud voor Construction Redesign.
  * `icon` verwijst naar een lijn-icoon in components/ui/ServiceIcon.tsx.
  */
 export type ServiceIconName =
@@ -28,7 +28,7 @@ export const services: Service[] = [
     icon: "road",
     lead: "Boven- en ondergrondse infrastructuur die mobiliteit verbetert en gemeenschappen verbindt.",
     body:
-      "Van woonstraat tot bedrijventerrein: wij realiseren wegen, parkeervoorzieningen en verkeersvoorzieningen van ontwerp-advies tot oplevering. Voor verkeersmaatregelen werken we samen met onze zustermaatschappijen Traffic Management en Traffic Controllers.",
+      "Van woonstraat tot bedrijventerrein: wij realiseren wegen, parkeervoorzieningen en verkeersvoorzieningen van ontwerp-advies tot oplevering. Voor verkeersmaatregelen werken we met onze eigen verkeersafdeling.",
     points: ["Wegen en parkeerterreinen", "Bushaltes en voetpaden", "Verkeersmaatregelen via zusterbedrijven"],
   },
   {

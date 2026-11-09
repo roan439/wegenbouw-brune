@@ -35,7 +35,7 @@ export default function Projects({ projects }: { projects: Project[] }) {
           id="projecten-titel"
           title={
             <>
-              Gerealiseerd in <span className="text-brune">Zuid-Limburg.</span>
+              Gerealiseerd in <span className="text-accent">Zuid-Limburg.</span>
             </>
           }
           intro={
@@ -63,13 +63,13 @@ export default function Projects({ projects }: { projects: Project[] }) {
                   aria-pressed={isActive}
                   onClick={() => setFilter(c.id)}
                   className={`relative shrink-0 rounded-full border px-4 py-2.5 text-sm font-semibold transition-colors ${
-                    isActive ? "border-brune text-ink" : "border-white/15 text-white/75 hover:border-white/35 hover:text-white"
+                    isActive ? "border-accent text-ink" : "border-white/15 text-white/75 hover:border-white/35 hover:text-white"
                   }`}
                 >
                   {isActive && (
                     <motion.span
                       layoutId="filter-pill"
-                      className="absolute inset-0 -z-0 rounded-full bg-brune"
+                      className="absolute inset-0 -z-0 rounded-full bg-accent"
                       transition={{ type: "spring", stiffness: 400, damping: 34 }}
                     />
                   )}
@@ -102,7 +102,7 @@ export default function Projects({ projects }: { projects: Project[] }) {
 
         <p className="mt-10 text-sm text-white/45">
           Benieuwd naar ons werk in uw gemeente of op uw terrein?{" "}
-          <a href="/#contact" className="font-semibold text-white underline decoration-brune underline-offset-4 hover:text-brune">
+          <a href="/#contact" className="font-semibold text-white underline decoration-accent underline-offset-4 hover:text-accent">
             Neem contact op
           </a>
           .
@@ -142,7 +142,7 @@ function ProjectCard({ project: p, featured, onOpen }: { project: Project; featu
           ))}
         </div>
         <div className="absolute inset-x-0 bottom-0 p-5 sm:p-6">
-          <p className="eyebrow flex items-center gap-2 text-brune-soft">
+          <p className="eyebrow flex items-center gap-2 text-accent-soft">
             <PinIcon /> {p.location}
           </p>
           <h3 className={`mt-2 font-display font-extrabold leading-[1.05] tracking-tight text-white ${featured ? "text-[clamp(1.6rem,3vw,2.6rem)]" : "text-xl"}`}>
@@ -151,7 +151,7 @@ function ProjectCard({ project: p, featured, onOpen }: { project: Project; featu
           <p className={`mt-2 text-white/70 ${featured ? "max-w-lg" : "line-clamp-2 text-sm"}`}>{p.summary}</p>
           <span className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-white">
             Bekijk project
-            <span className="grid size-7 place-items-center rounded-full bg-brune text-ink transition-transform duration-300 group-hover:translate-x-1">
+            <span className="grid size-7 place-items-center rounded-full bg-accent text-ink transition-transform duration-300 group-hover:translate-x-1">
               →
             </span>
           </span>
@@ -229,7 +229,7 @@ function ProjectDialog({ project, onClose }: { project: Project | null; onClose:
             </div>
             <div className="grid gap-8 p-6 sm:p-10 lg:grid-cols-12">
               <div className="lg:col-span-8">
-                <p className="eyebrow flex items-center gap-2 text-brune">
+                <p className="eyebrow flex items-center gap-2 text-accent">
                   <PinIcon /> {project.location}
                 </p>
                 <h3 id="project-dialog-titel" className="mt-3 font-display text-3xl font-extrabold tracking-tight sm:text-4xl">
@@ -259,7 +259,7 @@ function ProjectDialog({ project, onClose }: { project: Project | null; onClose:
                       <ul className="grid gap-2">
                         {project.highlights.map((h) => (
                           <li key={h} className="flex items-start gap-2.5 text-sm text-white/80">
-                            <span aria-hidden className="mt-2 h-[2px] w-3 shrink-0 bg-brune" />
+                            <span aria-hidden className="mt-2 h-[2px] w-3 shrink-0 bg-accent" />
                             {h}
                           </li>
                         ))}

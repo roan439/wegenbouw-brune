@@ -101,9 +101,9 @@ export default function ContactForm() {
         initial={{ opacity: 0, y: 16 }}
         animate={{ opacity: 1, y: 0 }}
         role="status"
-        className="flex min-h-[28rem] flex-col items-start justify-center rounded-[1.75rem] border border-brune/40 bg-white/[0.03] p-8 sm:p-12"
+        className="flex min-h-[28rem] flex-col items-start justify-center rounded-[1.75rem] border border-accent/40 bg-white/[0.03] p-8 sm:p-12"
       >
-        <span className="grid size-14 place-items-center rounded-full bg-brune text-2xl text-ink">✓</span>
+        <span className="grid size-14 place-items-center rounded-full bg-accent text-2xl text-ink">✓</span>
         <h3 className="mt-6 font-display text-3xl font-extrabold tracking-tight">Bedankt voor uw aanvraag!</h3>
         <p className="mt-3 max-w-md leading-relaxed text-white/70">
           We hebben uw bericht ontvangen en nemen zo snel mogelijk contact met u op om uw project te bespreken.
@@ -201,11 +201,11 @@ export default function ContactForm() {
             name="privacy"
             aria-invalid={err("privacy") ? true : undefined}
             aria-describedby={err("privacy") ? "f-privacy-err" : undefined}
-            className="mt-0.5 size-5 shrink-0 accent-[var(--color-brune)]"
+            className="mt-0.5 size-5 shrink-0 accent-[var(--color-accent)]"
           />
           <span>
             Ik ga akkoord met de verwerking van mijn gegevens volgens de{" "}
-            <a href="/privacyverklaring" className="font-semibold text-white underline decoration-brune underline-offset-4">
+            <a href="/privacyverklaring" className="font-semibold text-white underline decoration-accent underline-offset-4">
               privacyverklaring
             </a>
             . *

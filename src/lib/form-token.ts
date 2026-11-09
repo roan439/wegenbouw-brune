@@ -12,7 +12,7 @@ function secret() {
 }
 
 function sign(ts: string) {
-  return createHmac("sha256", secret()).update(`brune-form:${ts}`).digest("base64url");
+  return createHmac("sha256", secret()).update(`cr-form:${ts}`).digest("base64url");
 }
 
 export function issueToken(): string {

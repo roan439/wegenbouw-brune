@@ -287,7 +287,7 @@ function HeroScroll() {
           <div className="absolute inset-x-4 bottom-[calc(max(1.25rem,env(safe-area-inset-bottom))+100lvh-100svh)] flex items-end justify-between gap-4 sm:inset-x-6 lg:bottom-6">
             <div className="min-w-0">
               <p className="eyebrow flex items-center gap-2 text-white/60">
-                <span className="text-brune">Fase</span>
+                <span className="text-accent">Fase</span>
                 <span ref={phaseNumRef}>01</span>
                 <span className="text-white/30">/ 05</span>
               </p>
@@ -305,7 +305,7 @@ function HeroScroll() {
                       segmentRefs.current[i] = el;
                     }}
                     data-on={i === 0}
-                    className="h-1 w-6 rounded-full bg-white/20 transition-colors duration-500 data-[on=true]:bg-brune sm:w-8"
+                    className="h-1 w-6 rounded-full bg-white/20 transition-colors duration-500 data-[on=true]:bg-accent sm:w-8"
                   />
                 ))}
               </div>
@@ -318,7 +318,7 @@ function HeroScroll() {
           <div className="shell flex h-full flex-col pt-[calc(5.5rem+env(safe-area-inset-top))] lg:justify-center lg:pt-16">
             <div className="lg:max-w-[46vw] xl:max-w-[44vw]">
               <p className="eyebrow mb-4 flex items-center gap-3 text-white/70 lg:mb-6">
-                <span className="inline-block h-px w-8 shrink-0 bg-brune" />
+                <span className="inline-block h-px w-8 shrink-0 bg-accent" />
                 <span>
                   Wegenbouw<span className="hidden sm:inline"> · Straatwerk · Infrastructuur</span> — Zuid-Limburg
                 </span>
@@ -327,7 +327,7 @@ function HeroScroll() {
                 {HEADLINES.map((h, i) => {
                   const words = h.text.split(" ");
                   const content = words.map((w, wi) => (
-                    <span key={wi} className={wi === words.length - 1 ? "text-brune" : undefined}>
+                    <span key={wi} className={wi === words.length - 1 ? "text-accent" : undefined}>
                       {w}
                       {wi < words.length - 1 ? " " : ""}
                     </span>
@@ -340,7 +340,7 @@ function HeroScroll() {
                   return i === 0 ? (
                     <h1 key={h.text} ref={setRef} className={cls}>
                       {content}
-                      <span className="sr-only"> — Wegenbouw Brune B.V. uit Geleen</span>
+                      <span className="sr-only"> — Construction Redesign</span>
                     </h1>
                   ) : (
                     <p key={h.text} ref={setRef} className={cls} style={{ opacity: 0, visibility: "hidden" }}>
@@ -368,7 +368,7 @@ function HeroScroll() {
             className="absolute bottom-24 left-1/2 hidden -translate-x-1/2 flex-col items-center gap-3 text-white/60 lg:bottom-10 lg:left-16 lg:flex lg:translate-x-0 lg:flex-row xl:left-24"
           >
             <span className="relative block h-10 w-6 rounded-full border border-white/30">
-              <span className="absolute left-1/2 top-2 h-2 w-0.5 -translate-x-1/2 animate-bounce rounded-full bg-brune" />
+              <span className="absolute left-1/2 top-2 h-2 w-0.5 -translate-x-1/2 animate-bounce rounded-full bg-accent" />
             </span>
             <span className="eyebrow">Scroll en zie de straat veranderen</span>
           </div>
@@ -376,7 +376,7 @@ function HeroScroll() {
 
         {/* Totale voortgang */}
         <div aria-hidden className="absolute inset-x-0 top-0 z-20 h-[2px] bg-white/5">
-          <div ref={progressRef} className="h-full origin-left scale-x-0 bg-brune" />
+          <div ref={progressRef} className="h-full origin-left scale-x-0 bg-accent" />
         </div>
       </div>
     </section>
@@ -404,8 +404,8 @@ function HeroStatic() {
         <div className="shell relative flex min-h-[100svh] flex-col justify-center py-28 lg:order-1">
           <p className="eyebrow mb-6 text-white/70">Wegenbouw · Straatwerk · Infrastructuur — Zuid-Limburg</p>
           <h1 className="display text-[clamp(2.6rem,6vw,6rem)]">
-            Sterk in <span className="text-brune">wegenbouw.</span>
-            <span className="sr-only"> — Wegenbouw Brune B.V. uit Geleen</span>
+            Sterk in <span className="text-accent">wegenbouw.</span>
+            <span className="sr-only"> — Construction Redesign</span>
           </h1>
           <p className="display mt-6 text-[clamp(1.6rem,3vw,2.8rem)] text-white/80">
             Van grondwerk tot perfect straatwerk.

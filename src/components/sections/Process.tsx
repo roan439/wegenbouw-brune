@@ -42,7 +42,7 @@ export default function Process() {
           id="werkwijze-titel"
           title={
             <>
-              Laag voor laag <span className="text-brune">naar een weg die blijft.</span>
+              Laag voor laag <span className="text-accent">naar een weg die blijft.</span>
             </>
           }
           intro={
@@ -59,7 +59,7 @@ export default function Process() {
             <div className="overflow-hidden rounded-[1.5rem] border border-white/10 bg-char">
               <div className="flex items-center justify-between border-b border-white/10 px-5 py-3">
                 <span className="eyebrow hidden text-white/50 sm:inline">Doorsnede</span>
-                <span className="eyebrow text-brune">
+                <span className="eyebrow text-accent">
                   Stap {processSteps[step].number} — {processSteps[step].title}
                 </span>
               </div>
@@ -87,7 +87,7 @@ export default function Process() {
           <ol className="relative lg:col-span-5">
             <div aria-hidden className="absolute bottom-0 left-[1.15rem] top-0 w-px bg-white/10">
               <motion.div
-                className="w-full origin-top bg-brune"
+                className="w-full origin-top bg-accent"
                 style={{ height: "100%" }}
                 animate={{ scaleY: (step + 1) / processSteps.length }}
                 transition={{ duration: 0.6, ease: EASE }}
@@ -106,13 +106,13 @@ export default function Process() {
                 >
                   <span
                     className={`relative z-10 grid size-[2.35rem] shrink-0 place-items-center rounded-full border font-mono text-xs transition-all duration-500 ${
-                      i <= step ? "border-brune bg-brune text-ink" : "border-white/20 bg-ink text-white/50"
+                      i <= step ? "border-accent bg-accent text-ink" : "border-white/20 bg-ink text-white/50"
                     }`}
                   >
                     {s.number}
                   </span>
                   <div className={`transition-opacity duration-500 ${isActive ? "opacity-100" : "opacity-40"}`}>
-                    <p className="eyebrow text-brune">{s.kicker}</p>
+                    <p className="eyebrow text-accent">{s.kicker}</p>
                     <h3 className="mt-2 font-display text-[clamp(1.8rem,3.4vw,2.8rem)] font-extrabold leading-none tracking-tight [font-stretch:110%]">
                       {s.title}
                     </h3>

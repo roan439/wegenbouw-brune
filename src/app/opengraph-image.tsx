@@ -1,6 +1,6 @@
 import { ImageResponse } from "next/og";
 
-export const alt = "Wegenbouw Brune B.V. — Sterk in wegenbouw.";
+export const alt = "Construction Redesign — Sterk in wegenbouw.";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -23,8 +23,8 @@ export default function OpengraphImage() {
         <div style={{ display: "flex", alignItems: "center", gap: 18 }}>
           <div style={{ width: 56, height: 56, borderRadius: 12, background: "#ff6a13" }} />
           <div style={{ display: "flex", flexDirection: "column" }}>
-            <div style={{ fontSize: 36, fontWeight: 800, letterSpacing: -1 }}>BRUNE</div>
-            <div style={{ fontSize: 16, letterSpacing: 4, opacity: 0.6 }}>WEGENBOUW B.V.</div>
+            <div style={{ fontSize: 36, fontWeight: 800, letterSpacing: -1 }}>CONSTRUCTION</div>
+            <div style={{ fontSize: 16, letterSpacing: 4, opacity: 0.6 }}>REDESIGN</div>
           </div>
         </div>
         <div style={{ display: "flex", flexDirection: "column" }}>
@@ -33,7 +33,7 @@ export default function OpengraphImage() {
             wegenbouw.
           </div>
           <div style={{ marginTop: 28, fontSize: 28, opacity: 0.7 }}>
-            Wegenbouw · Straatwerk · Grondwerk · Riolering — Geleen, Zuid-Limburg
+            Wegenbouw · Straatwerk · Grondwerk · Riolering — Zuid-Limburg
           </div>
         </div>
         <div style={{ display: "flex", height: 6, width: "100%", gap: 18 }}>

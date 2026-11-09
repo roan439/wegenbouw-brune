@@ -28,7 +28,7 @@ export default function Footer() {
             <ul className="mt-5 grid gap-3">
               {[...nav, { href: "/#contact", label: "Contact" }].map((n) => (
                 <li key={n.href}>
-                  <a href={n.href} className="text-white/75 transition-colors hover:text-brune">
+                  <a href={n.href} className="text-white/75 transition-colors hover:text-accent">
                     {n.label}
                   </a>
                 </li>
@@ -41,7 +41,7 @@ export default function Footer() {
             <ul className="mt-5 grid gap-3">
               {services.map((s) => (
                 <li key={s.id}>
-                  <a href="/#werkzaamheden" className="text-white/75 transition-colors hover:text-brune">
+                  <a href="/#werkzaamheden" className="text-white/75 transition-colors hover:text-accent">
                     {s.title}
                   </a>
                 </li>
@@ -53,26 +53,13 @@ export default function Footer() {
             <p className="eyebrow text-white/40">Contact</p>
             <ul className="mt-5 grid gap-3">
               <li>
-                <a href={site.phone.href} className="text-lg font-semibold text-white hover:text-brune">
+                <a href={site.phone.href} className="text-lg font-semibold text-white hover:text-accent">
                   {site.phone.display}
                 </a>
               </li>
               <li>
-                <a href={`mailto:${site.email}`} className="text-white/75 hover:text-brune">
+                <a href={`mailto:${site.email}`} className="text-white/75 hover:text-accent">
                   {site.email}
-                </a>
-              </li>
-              <li>
-                <a
-                  href={site.social.facebook}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 text-white/75 hover:text-brune"
-                >
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden>
-                    <path d="M14 8h3V4h-3c-2.8 0-4 1.8-4 4.5V11H7v4h3v9h4v-9h3l1-4h-4V8.6c0-.4.3-.6.6-.6Z" />
-                  </svg>
-                  Facebook
                 </a>
               </li>
             </ul>
@@ -91,9 +78,9 @@ export default function Footer() {
 
         <p
           aria-hidden
-          className="display pointer-events-none mt-20 select-none text-center text-[22vw] leading-[0.8] text-white/[0.04] lg:text-[17vw]"
+          className="display pointer-events-none mt-20 select-none text-center text-[17vw] leading-[0.8] text-white/[0.04] lg:text-[15vw]"
         >
-          BRUNE
+          REDESIGN
         </p>
 
         <div className="mt-8 flex flex-col gap-4 border-t border-white/10 pt-8 text-sm text-white/45 lg:flex-row lg:items-center lg:justify-between">
@@ -109,11 +96,6 @@ export default function Footer() {
             <li>
               <a href="/algemene-voorwaarden" className="hover:text-white">
                 Algemene voorwaarden
-              </a>
-            </li>
-            <li>
-              <a href={site.documents.beleidsverklaring} target="_blank" rel="noopener noreferrer" className="hover:text-white">
-                Beleidsverklaring (PDF)
               </a>
             </li>
           </ul>

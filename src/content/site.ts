@@ -1,52 +1,40 @@
 /**
- * Geverifieerde bedrijfsgegevens — bron: www.wegenbouw-brune.nl (home, over ons, contact).
+ * Bedrijfsgegevens van de demo/portfolio-site "Construction Redesign".
+ * Adres, telefoon, e-mail, KvK en BTW zijn PLACEHOLDERS — vervang ze per klant.
  * Pas hier aan; alle componenten, JSON-LD en de footer lezen uit dit bestand.
  */
 export const site = {
-  name: "Wegenbouw Brune B.V.",
-  shortName: "Brune",
+  name: "Construction Redesign",
+  shortName: "Construction Redesign",
   tagline: "Advies, uitvoering en onderhoud",
   description:
-    "Wegenbouw Brune B.V. uit Geleen: vakmanschap in wegenbouw, straatwerk, grondwerk, riolering, asfaltering en infrastructuur voor gemeenten en bedrijven in Zuid-Limburg.",
-  url: process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, "") || "https://www.wegenbouw-brune.nl",
+    "Construction Redesign: vakmanschap in wegenbouw, straatwerk, grondwerk, riolering, asfaltering en infrastructuur voor gemeenten en bedrijven in Zuid-Limburg.",
+  url: process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, "") || "https://construction-redesign.vercel.app",
   region: "Zuid-Limburg",
   address: {
-    street: "Transportlaan 80",
-    postalCode: "6163 CX",
-    city: "Geleen",
+    street: "Voorbeeldstraat 1",
+    postalCode: "1234 AB",
+    city: "Voorbeeldstad",
     province: "Limburg",
     country: "NL",
   },
-  phone: { display: "045 404 20 43", href: "tel:+31454042043", intl: "+31 45 404 20 43" },
-  email: "info@wegenbouw-brune.nl",
-  kvk: "140.946.46",
-  btw: "NL 8179.38.8754.B01",
-  social: {
-    facebook: "https://www.facebook.com/wegenbouwbrune/",
-  },
+  phone: { display: "012 345 67 89", href: "tel:+31123456789", intl: "+31 12 345 67 89" },
+  email: "info@example.com",
+  kvk: "12345678",
+  btw: "NL000000000B01",
   certifications: ["ISO 9001", "VCA"],
-  sisterCompanies: ["Traffic Management", "Traffic Controllers"],
-  documents: {
-    privacy: "https://www.wegenbouw-brune.nl/wp-content/uploads/privacyverklaring.pdf",
-    beleidsverklaring:
-      "https://www.wegenbouw-brune.nl/wp-content/uploads/beleidsverklaring-2026-wegenbouw-brune.pdf",
-    inkoopvoorwaarden:
-      "https://www.wegenbouw-brune.nl/wp-content/uploads/def-algemene-inkoop-en-onderaannemingsvoorwaarden-brune-wegenbouw-2026.pdf",
-    verkoopvoorwaarden:
-      "https://www.wegenbouw-brune.nl/wp-content/uploads/def-algemene-verkoop-en-leveringsvoorwaarden-brune-wegenbouw-2026.pdf",
-  },
 } as const;
 
-/** Opdrachtgevers zoals vermeld op de bestaande website (referenties). */
+/** Typen opdrachtgevers (demo — geen echte referenties). */
 export const clients = [
-  "Gemeente Beekdaelen",
-  "Gemeente Beek",
-  "Zuyderland",
-  "Katoen Natie",
-  "Boels",
-  "Kasteelpark Born",
-  "Laudy Bouw",
-  "Sfeervol Meerssen",
+  "Gemeenten",
+  "Waterschappen",
+  "Woningcorporaties",
+  "Bedrijventerreinen",
+  "Zorginstellingen",
+  "Projectontwikkelaars",
+  "Aannemers",
+  "Particulieren",
 ] as const;
 
 export const nav = [
@@ -54,5 +42,5 @@ export const nav = [
   { href: "/#werkzaamheden", label: "Werkzaamheden" },
   { href: "/#projecten", label: "Projecten" },
   { href: "/#werkwijze", label: "Werkwijze" },
-  { href: "/#waarom-brune", label: "Waarom Brune" },
+  { href: "/#waarom-ons", label: "Waarom wij" },
 ] as const;

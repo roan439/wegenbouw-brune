@@ -1,9 +1,9 @@
 @import "tailwindcss";
 
 @theme {
-  --color-brune: #ff6a13;
-  --color-brune-deep: #e05207;
-  --color-brune-soft: #ffb07f;
+  --color-accent: #ff6a13;
+  --color-accent-deep: #e05207;
+  --color-accent-soft: #ffb07f;
   --color-ink: #0d0e0f;
   --color-char: #151719;
   --color-graphite: #202327;
@@ -40,11 +40,11 @@
     overflow-x: clip;
   }
   ::selection {
-    background: var(--color-brune);
+    background: var(--color-accent);
     color: var(--color-ink);
   }
   :focus-visible {
-    outline: 2px solid var(--color-brune);
+    outline: 2px solid var(--color-accent);
     outline-offset: 3px;
     border-radius: 2px;
   }
@@ -147,7 +147,7 @@
     transform: scale(0.97);
   }
   .btn-primary {
-    background: var(--color-brune);
+    background: var(--color-accent);
     color: var(--color-ink);
   }
   .btn-primary:hover {
@@ -192,7 +192,7 @@
   }
   .field:focus {
     outline: none;
-    border-color: var(--color-brune);
+    border-color: var(--color-accent);
     background: rgb(255 255 255 / 0.06);
   }
   .field[aria-invalid="true"] {

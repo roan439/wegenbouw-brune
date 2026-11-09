@@ -1,5 +1,5 @@
 /**
- * Projecten — uitsluitend projecten die op www.wegenbouw-brune.nl/projecten/ staan.
+ * Projecten — demo-inhoud voor Construction Redesign.
  *
  * CMS-READY: de vorm van `Project` is bewust plat gehouden zodat hij 1-op-1 te mappen is op
  * een CMS-schema (Sanity, Storyblok, Contentful, WordPress REST/ACF …). Zie `src/lib/cms.ts`:
@@ -30,7 +30,6 @@ export type Project = {
   description: string[];
   highlights: string[];
   images: ProjectImage[];
-  sourceUrl: string;
 };
 
 const WP = "https://www.wegenbouw-brune.nl/wp-content/uploads";
@@ -52,18 +51,16 @@ export const projects: Project[] = [
       { src: `${WP}/img-20250430-wa0020-1024x768.jpg`, alt: "Werkzaamheden Componistenbuurt Nuth", width: 1024, height: 768 },
       { src: `${WP}/img-20250430-wa0021-1024x768.jpg`, alt: "Trottoir en rijbaan in uitvoering, Nuth", width: 1024, height: 768 },
     ],
-    sourceUrl: "https://www.wegenbouw-brune.nl/project/herinrichting-componistenbuurt-nuth/",
   },
   {
     slug: "nieuwe-bushalte-en-voetpad-nuth",
     title: "Nieuwe bushaltes en voetpad",
     location: "Nuth",
-    client: "Gemeente Beekdaelen",
     categories: ["verkeer", "straatwerk"],
     summary: "Twee nieuwe bushaltes en ruim 700 meter voetpad, in nachtwerk aangelegd.",
     description: [
       "Op een van de drukste en belangrijkste ontsluitingswegen van de gemeente Beekdaelen hebben wij twee nieuwe bushaltes en ruim 700 meter voetpad aangelegd.",
-      "Het werk werd ’s nachts en onder enige tijdsdruk uitgevoerd — volledig conform planning. Samen met onze verkeersafdeling, Traffic Management en Traffic Controllers, werkten we veilig in de nachtelijke uren.",
+      "Het werk werd ’s nachts en onder enige tijdsdruk uitgevoerd — volledig conform planning. Samen met onze eigen verkeersafdeling werkten we veilig in de nachtelijke uren.",
     ],
     highlights: ["2 bushaltes", "Ruim 700 m voetpad", "Nachtwerk conform planning"],
     images: [
@@ -71,7 +68,6 @@ export const projects: Project[] = [
       { src: `${WP}/afbeelding-van-whatsapp-op-2025-10-14-om-15.56.09_40aaccbb-1024x768.jpg`, alt: "Aanleg voetpad in Nuth", width: 1024, height: 768 },
       { src: `${WP}/afbeelding-van-whatsapp-op-2025-10-14-om-15.56.09_2fcb51d6-1024x768.jpg`, alt: "Opgeleverd voetpad en bushalte, Nuth", width: 1024, height: 768 },
     ],
-    sourceUrl: "https://www.wegenbouw-brune.nl/project/nieuwe-bushalte-en-voetpad-nuth/",
   },
   {
     slug: "2e-fase-gijselaar-amstenrade",
@@ -88,13 +84,11 @@ export const projects: Project[] = [
       { src: `${WP}/img-20251126-wa0030-1024x768.jpg`, alt: "Herinrichting De Gijselaar in uitvoering", width: 1024, height: 768 },
       { src: `${WP}/img-20251126-wa0028-1024x768.jpg`, alt: "Bestrating De Gijselaar, Amstenrade", width: 1024, height: 768 },
     ],
-    sourceUrl: "https://www.wegenbouw-brune.nl/project/2e-fase-gijselaar-amstenrade/",
   },
   {
     slug: "parkeerplaats-de-gijselaar-amstenrade",
     title: "Parkeerplaats De Gijselaar",
     location: "Amstenrade",
-    client: "Gemeente Beekdaelen",
     categories: ["parkeren", "herinrichting"],
     summary: "Eerste fase van de parkeervoorziening voor nieuwbouwwijk De Gijselaar.",
     description: [
@@ -105,7 +99,6 @@ export const projects: Project[] = [
     images: [
       { src: `${WP}/afbeelding-van-whatsapp-op-2024-12-17-om-15.22.02_dfcdde67.jpg`, alt: "Parkeerplaats De Gijselaar in Amstenrade", width: 1600, height: 1200 },
     ],
-    sourceUrl: "https://www.wegenbouw-brune.nl/project/parkeerplaats-de-gijselaar-amstenrade/",
   },
   {
     slug: "rotonde-elementen-jos-klijnenlaan",
@@ -115,14 +108,13 @@ export const projects: Project[] = [
     summary: "Rotonde geschikt gemaakt voor vrachtverkeer met prefab elementen.",
     description: [
       "Om de rotonde beter geschikt te maken voor vrachtverkeer vervangen wij de rammelstrook en de rotondeblokken door prefab elementen van Leicon.",
-      "De uitvoering gebeurt in twee fasen, zodat de doorstroming gegarandeerd blijft — samen met onze zustermaatschappijen Traffic Management (verkeersmaatregelen) en Traffic Controllers (verkeersregelaars).",
+      "De uitvoering gebeurt in twee fasen, zodat de doorstroming gegarandeerd blijft — samen met onze eigen verkeersafdeling (verkeersmaatregelen en verkeersregelaars).",
     ],
     highlights: ["Prefab elementen Leicon", "Uitvoering in 2 fasen", "Doorstroming gegarandeerd"],
     images: [
       { src: `${WP}/afbeelding-van-whatsapp-op-2025-10-14-om-15.51.53_45006dc5.jpg`, alt: "Rotonde Jos Klijnenlaan met nieuwe prefab elementen", width: 1600, height: 1200 },
       { src: `${WP}/afbeelding-van-whatsapp-op-2025-10-14-om-15.51.53_31c4fb31-1024x768.jpg`, alt: "Plaatsen van rotonde-elementen", width: 1024, height: 768 },
     ],
-    sourceUrl: "https://www.wegenbouw-brune.nl/project/rotonde-elementen-jos-klijnenlaan/",
   },
   {
     slug: "synagoge-meerssen",
@@ -139,6 +131,5 @@ export const projects: Project[] = [
       { src: `${WP}/impressie-bestrating-bruin-rood-1024x585.jpg`, alt: "Impressie bestrating entree Synagoge Meerssen", width: 1024, height: 585 },
       { src: `${WP}/afbeelding-van-whatsapp-op-2025-12-02-om-12.29.03_d2b7a7c4-1-1024x576.jpg`, alt: "Werkzaamheden entree Synagoge Meerssen", width: 1024, height: 576 },
     ],
-    sourceUrl: "https://www.wegenbouw-brune.nl/project/synagoge-meerssen/",
   },
 ];

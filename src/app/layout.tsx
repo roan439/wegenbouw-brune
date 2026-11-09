@@ -21,18 +21,17 @@ const plexMono = IBM_Plex_Mono({
   display: "swap",
 });
 
-const title = "Wegenbouw Brune B.V. | Wegenbouw, straatwerk & grondwerk in Zuid-Limburg";
+const title = "Construction Redesign | Wegenbouw, straatwerk & grondwerk in Zuid-Limburg";
 
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
-  title: { default: title, template: "%s | Wegenbouw Brune B.V." },
+  title: { default: title, template: "%s | Construction Redesign" },
   description: site.description,
   applicationName: site.name,
   keywords: [
     "wegenbouw Zuid-Limburg",
-    "wegenbouw Geleen",
     "straatwerk Limburg",
-    "stratenmaker Geleen",
+    "stratenmaker Limburg",
     "grondwerk Zuid-Limburg",
     "riolering",
     "asfaltering",
@@ -52,7 +51,7 @@ export const metadata: Metadata = {
   twitter: { card: "summary_large_image", title, description: site.description },
   robots: { index: true, follow: true },
   formatDetection: { telephone: true, email: true, address: true },
-  other: { "geo.region": "NL-LI", "geo.placename": "Geleen" },
+  other: { "geo.region": "NL-LI", "geo.placename": "Zuid-Limburg" },
 };
 
 export const viewport: Viewport = {
@@ -68,7 +67,6 @@ const jsonLd = {
   "@type": "GeneralContractor",
   "@id": `${site.url}/#organisatie`,
   name: site.name,
-  alternateName: "Wegenbouw Brune",
   url: site.url,
   image: `${site.url}/opengraph-image`,
   description: site.description,
@@ -87,11 +85,6 @@ const jsonLd = {
   },
   areaServed: [
     { "@type": "AdministrativeArea", name: "Zuid-Limburg" },
-    { "@type": "City", name: "Geleen" },
-    { "@type": "City", name: "Sittard-Geleen" },
-    { "@type": "City", name: "Beekdaelen" },
-    { "@type": "City", name: "Meerssen" },
-    { "@type": "City", name: "Beek" },
   ],
   knowsAbout: services.map((s) => s.title),
   hasOfferCatalog: {
@@ -102,7 +95,6 @@ const jsonLd = {
       itemOffered: { "@type": "Service", name: s.title, description: s.lead },
     })),
   },
-  sameAs: [site.social.facebook],
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
@@ -111,7 +103,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body className="min-h-screen bg-ink text-paper">
         <a
           href="#inhoud"
-          className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:rounded-full focus:bg-brune focus:px-5 focus:py-3 focus:font-bold focus:text-ink"
+          className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:rounded-full focus:bg-accent focus:px-5 focus:py-3 focus:font-bold focus:text-ink"
         >
           Direct naar de inhoud
         </a>

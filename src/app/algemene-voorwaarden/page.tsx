@@ -8,35 +8,14 @@ export const metadata: Metadata = {
   alternates: { canonical: "/algemene-voorwaarden" },
 };
 
-const docs = [
-  { title: "Algemene verkoop- en leveringsvoorwaarden", href: site.documents.verkoopvoorwaarden },
-  { title: "Algemene inkoop- en onderaannemingsvoorwaarden", href: site.documents.inkoopvoorwaarden },
-  { title: "Beleidsverklaring", href: site.documents.beleidsverklaring },
-  { title: "Privacyverklaring", href: site.documents.privacy },
-];
-
 export default function VoorwaardenPage() {
   return (
     <LegalPage eyebrow="Juridisch" title="Algemene voorwaarden">
       <p>
-        Op alle aanbiedingen, opdrachten en overeenkomsten van {site.name} zijn de onderstaande voorwaarden van
-        toepassing. U kunt de documenten hier downloaden.
+        Op alle aanbiedingen, opdrachten en overeenkomsten van {site.name} zijn algemene voorwaarden van toepassing.
+        Wilt u de voorwaarden ontvangen? Mail naar <a href={`mailto:${site.email}`}>{site.email}</a>, dan sturen wij
+        ze u toe.
       </p>
-      <ul className="grid gap-3">
-        {docs.map((d) => (
-          <li key={d.href}>
-            <a
-              href={d.href}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center justify-between gap-4 rounded-2xl border border-ink/10 bg-white p-5 !no-underline transition-colors hover:border-brune"
-            >
-              <span>{d.title}</span>
-              <span className="eyebrow text-brune-deep">PDF ↗</span>
-            </a>
-          </li>
-        ))}
-      </ul>
     </LegalPage>
   );
 }

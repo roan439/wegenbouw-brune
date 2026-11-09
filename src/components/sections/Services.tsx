@@ -32,7 +32,7 @@ export default function Services() {
           }
           intro={
             <p>
-              Van het eerste advies tot jarenlang onderhoud: Brune voert het complete traject in eigen beheer uit, met
+              Van het eerste advies tot jarenlang onderhoud: wij voeren het complete traject in eigen beheer uit, met
               eigen mensen en een eigen machinepark.
             </p>
           }
@@ -62,7 +62,7 @@ export default function Services() {
                     document.getElementById(`tab-${services[next].id}`)?.focus();
                   }}
                   className={`group relative flex min-h-[8.5rem] flex-col justify-between overflow-hidden rounded-2xl border p-5 text-left transition-colors duration-300 ${
-                    isActive ? "border-brune/60 bg-white/[0.06]" : "border-white/10 bg-white/[0.02] hover:border-white/25"
+                    isActive ? "border-accent/60 bg-white/[0.06]" : "border-white/10 bg-white/[0.02] hover:border-white/25"
                   }`}
                 >
                   {isActive && (
@@ -76,14 +76,14 @@ export default function Services() {
                   <span className="relative flex items-start justify-between">
                     <ServiceIcon
                       name={s.icon}
-                      className={`size-9 transition-colors ${isActive ? "text-brune" : "text-white/50 group-hover:text-white/80"}`}
+                      className={`size-9 transition-colors ${isActive ? "text-accent" : "text-white/50 group-hover:text-white/80"}`}
                     />
                     <span className="eyebrow text-white/35">{String(i + 1).padStart(2, "0")}</span>
                   </span>
                   <span className="relative mt-6 font-display text-lg font-bold leading-tight tracking-tight">{s.title}</span>
                   <span
                     aria-hidden
-                    className={`absolute bottom-0 left-0 h-[3px] bg-brune transition-all duration-500 ${isActive ? "w-full" : "w-0 group-hover:w-1/3"}`}
+                    className={`absolute bottom-0 left-0 h-[3px] bg-accent transition-all duration-500 ${isActive ? "w-full" : "w-0 group-hover:w-1/3"}`}
                   />
                 </button>
               );
@@ -106,7 +106,7 @@ export default function Services() {
                   transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
                   className="flex h-full flex-col"
                 >
-                  <ServiceIcon name={current.icon} className="size-14 text-brune" />
+                  <ServiceIcon name={current.icon} className="size-14 text-accent" />
                   <h3 className="mt-8 font-display text-3xl font-extrabold tracking-tight [font-stretch:108%]">
                     {current.title}
                   </h3>
@@ -115,7 +115,7 @@ export default function Services() {
                   <ul className="mt-8 grid gap-3 border-t border-white/10 pt-6">
                     {current.points.map((p) => (
                       <li key={p} className="flex items-center gap-3 text-white/80">
-                        <span aria-hidden className="h-[2px] w-4 bg-brune" />
+                        <span aria-hidden className="h-[2px] w-4 bg-accent" />
                         {p}
                       </li>
                     ))}
@@ -138,7 +138,7 @@ export default function Services() {
           {services.map((s, i) => {
             const isOpen = openMobile === i;
             return (
-              <li key={s.id} className={`overflow-hidden rounded-2xl border transition-colors ${isOpen ? "border-brune/50 bg-white/[0.05]" : "border-white/10 bg-white/[0.02]"}`}>
+              <li key={s.id} className={`overflow-hidden rounded-2xl border transition-colors ${isOpen ? "border-accent/50 bg-white/[0.05]" : "border-white/10 bg-white/[0.02]"}`}>
                 <h3>
                   <button
                     type="button"
@@ -147,11 +147,11 @@ export default function Services() {
                     onClick={() => setOpenMobile(isOpen ? null : i)}
                     className="flex w-full items-center gap-4 p-5 text-left"
                   >
-                    <ServiceIcon name={s.icon} className={`size-8 shrink-0 ${isOpen ? "text-brune" : "text-white/55"}`} />
+                    <ServiceIcon name={s.icon} className={`size-8 shrink-0 ${isOpen ? "text-accent" : "text-white/55"}`} />
                     <span className="flex-1 font-display text-lg font-bold tracking-tight">{s.title}</span>
                     <span
                       aria-hidden
-                      className={`grid size-8 place-items-center rounded-full border border-white/15 text-lg transition-transform duration-300 ${isOpen ? "rotate-45 bg-brune text-ink" : ""}`}
+                      className={`grid size-8 place-items-center rounded-full border border-white/15 text-lg transition-transform duration-300 ${isOpen ? "rotate-45 bg-accent text-ink" : ""}`}
                     >
                       +
                     </span>
@@ -172,7 +172,7 @@ export default function Services() {
                         <ul className="mt-5 grid gap-2">
                           {s.points.map((p) => (
                             <li key={p} className="flex items-center gap-3 text-sm text-white/80">
-                              <span aria-hidden className="h-[2px] w-3 bg-brune" />
+                              <span aria-hidden className="h-[2px] w-3 bg-accent" />
                               {p}
                             </li>
                           ))}

@@ -16,7 +16,7 @@ export default function SectionHeading({ index, eyebrow, title, intro, id, tone 
     <div className="grid gap-8 lg:grid-cols-12 lg:gap-12">
       <Reveal className="lg:col-span-7">
         <p className={`eyebrow flex items-center gap-3 ${muted}`}>
-          <span className="text-brune">{index}</span>
+          <span className="text-accent">{index}</span>
           <span className={`inline-block h-px w-10 ${line}`} />
           {eyebrow}
         </p>

@@ -25,28 +25,28 @@ const pillars = [
 ];
 
 const facts = [
-  { k: "Sinds", v: "de jaren ’70" },
-  { k: "Gevestigd in", v: "Geleen" },
+  { k: "Specialisme", v: "GWW & infra" },
+  { k: "Machinepark", v: "In eigen beheer" },
   { k: "Werkgebied", v: site.region },
   { k: "Gecertificeerd", v: site.certifications.join(" · ") },
 ];
 
 export default function Why() {
   return (
-    <section id="waarom-brune" aria-labelledby="waarom-titel" className="relative overflow-hidden bg-concrete-light text-ink">
+    <section id="waarom-ons" aria-labelledby="waarom-titel" className="relative overflow-hidden bg-concrete-light text-ink">
       <div className="shell py-24 sm:py-32 lg:py-40">
         <div className="grid gap-12 lg:grid-cols-12">
           <Reveal className="lg:col-span-5">
             <p className="eyebrow flex items-center gap-3 text-ink/55">
-              <span className="text-brune-deep">05</span>
+              <span className="text-accent-deep">05</span>
               <span className="inline-block h-px w-10 bg-ink/15" />
-              Waarom Brune BV?
+              Waarom kiezen voor ons?
             </p>
             <h2 id="waarom-titel" className="display mt-5 text-[clamp(2.3rem,5.6vw,5rem)]">
-              Een partner die <span className="text-brune-deep">doorpakt.</span>
+              Een partner die <span className="text-accent-deep">doorpakt.</span>
             </h2>
             <p className="mt-6 max-w-md text-[1.06rem] leading-relaxed text-ink/70">
-              Gemeenten en bedrijven kiezen voor Brune omdat ze weten wat ze krijgen: meedenken vooraf, strakke uitvoering
+              Gemeenten en bedrijven kiezen voor {site.name} omdat ze weten wat ze krijgen: meedenken vooraf, strakke uitvoering
               en een aanspreekpunt dat bereikbaar blijft.
             </p>
 
@@ -65,7 +65,7 @@ export default function Why() {
               {pillars.map((p, i) => (
                 <li key={p.title} className="border-b border-ink/15">
                   <Reveal delay={i * 0.06} y={18} className="group grid gap-3 py-7 sm:grid-cols-[4rem_1fr_1.4fr] sm:items-baseline sm:gap-6">
-                    <span className="font-mono text-sm text-brune-deep">{String(i + 1).padStart(2, "0")}</span>
+                    <span className="font-mono text-sm text-accent-deep">{String(i + 1).padStart(2, "0")}</span>
                     <h3 className="font-display text-2xl font-extrabold tracking-tight transition-transform duration-500 [font-stretch:110%] group-hover:translate-x-1">
                       {p.title}
                     </h3>
@@ -82,7 +82,7 @@ export default function Why() {
       <div className="border-t border-ink/10 bg-paper py-10" aria-labelledby="referenties-titel">
         <div className="shell flex flex-col gap-6 lg:flex-row lg:items-center lg:gap-12">
           <p id="referenties-titel" className="eyebrow shrink-0 text-ink/55">
-            Opdrachtgevers o.a.
+            Wij werken voor
           </p>
           <div className="relative flex-1 overflow-hidden [mask-image:linear-gradient(90deg,transparent,#000_8%,#000_92%,transparent)]">
             <ul className="flex w-max animate-[marquee_38s_linear_infinite] gap-12 motion-reduce:animate-none motion-reduce:flex-wrap">

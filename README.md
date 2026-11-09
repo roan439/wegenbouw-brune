@@ -1,4 +1,4 @@
-# Wegenbouw Brune B.V. — website
+# Construction Redesign — demo/portfolio-website
 
 Next.js 15 (App Router) · TypeScript · Tailwind CSS 4 · GSAP ScrollTrigger · Framer Motion.
 Klaar voor Vercel.
@@ -16,7 +16,7 @@ npm run build && npm start   # productie lokaal
 
 1. Push de map naar GitHub en importeer het project in Vercel (framework wordt automatisch herkend).
 2. Zet de environment variables uit `.env.example` in Vercel → Settings → Environment Variables:
-   - `NEXT_PUBLIC_SITE_URL` — bijv. `https://www.wegenbouw-brune.nl`
+   - `NEXT_PUBLIC_SITE_URL` — bijv. `https://construction-redesign.vercel.app`
    - `RESEND_API_KEY`, `CONTACT_FROM_EMAIL`, `CONTACT_TO_EMAIL` — e-mailverzending (zie hieronder)
    - `FORM_SIGNING_SECRET` — lange willekeurige string (`openssl rand -hex 32`)
    - optioneel `NEXT_PUBLIC_TURNSTILE_SITE_KEY` + `TURNSTILE_SECRET_KEY` (Cloudflare Turnstile)
@@ -49,8 +49,8 @@ npm run build && npm start   # productie lokaal
 | `src/content/process.ts` | Werkwijze-stappen |
 | `src/lib/cms.ts` | `getProjects()` — de enige plek om een CMS (Sanity, WordPress REST, Storyblok …) aan te sluiten |
 
-Alle gegevens komen van www.wegenbouw-brune.nl (nov. 2026). Er zijn geen projecten, cijfers of
-statistieken verzonnen.
+Dit is een neutrale demo. Adres, telefoon, e-mail, KvK en BTW in `src/content/site.ts` zijn placeholders;
+vervang ze per klant.
 
 **Projectfoto's** worden nu geladen vanaf de bestaande WordPress-site (`next.config.ts` → `remotePatterns`).
 Verhuis ze vóór het uitfaseren van de oude site naar `public/projecten/` of naar de CMS-mediabibliotheek.
@@ -71,7 +71,7 @@ Wilt u liever SMTP (bijv. Microsoft 365)? Vervang het `fetch`-blok in `src/app/a
 
 ## SEO
 
-- `GeneralContractor` JSON-LD met adres, KvK, BTW, werkgebied (Zuid-Limburg, Geleen, Beekdaelen, Meerssen, Beek) en diensten
+- `GeneralContractor` JSON-LD met adres, KvK, BTW, werkgebied (Zuid-Limburg) en diensten
 - Metadata/OpenGraph in `nl_NL`, dynamische OG-afbeelding, `sitemap.xml`, `robots.txt`, canonicals
 - Semantische HTML, één `h1`, skip-link, toetsenbordbediening (tabs, dialog, menu) en zichtbare focus
 

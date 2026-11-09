@@ -13,12 +13,7 @@ export default function PrivacyPage() {
     <LegalPage eyebrow="Juridisch" title="Privacyverklaring">
       <p>
         {site.name} gaat zorgvuldig om met uw persoonsgegevens en houdt zich aan de Algemene Verordening
-        Gegevensbescherming (AVG). De volledige, officiële privacyverklaring vindt u in het onderstaande document.
-      </p>
-      <p>
-        <a href={site.documents.privacy} target="_blank" rel="noopener noreferrer">
-          Download de privacyverklaring (PDF)
-        </a>
+        Gegevensbescherming (AVG). Hieronder leest u hoe wij met uw gegevens omgaan.
       </p>
       <h2>Contactformulier</h2>
       <p>

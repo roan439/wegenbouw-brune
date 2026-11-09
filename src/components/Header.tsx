@@ -160,7 +160,7 @@ export default function Header() {
                       className="flex items-center justify-between py-5 font-display text-3xl font-extrabold tracking-tight [font-stretch:110%]"
                     >
                       {item.label}
-                      <span className="eyebrow text-brune">0{i + 1}</span>
+                      <span className="eyebrow text-accent">0{i + 1}</span>
                     </a>
                   </motion.li>
                 ))}
