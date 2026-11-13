@@ -352,7 +352,7 @@ function HeroScroll() {
 
               <div className="pointer-events-auto mt-8 hidden flex-wrap gap-3 lg:flex">
                 <a href="#contact" className="btn btn-primary">
-                  Offerte aanvragen
+                  Vraag een offerte aan
                   <Arrow />
                 </a>
                 <a href="#projecten" className="btn btn-ghost">
@@ -413,7 +413,7 @@ function HeroStatic() {
           <p className="display mt-3 text-[clamp(1.6rem,3vw,2.8rem)] text-white/80">Samen bouwen aan morgen.</p>
           <div className="mt-10 flex flex-wrap gap-3">
             <a href="#contact" className="btn btn-primary">
-              Offerte aanvragen
+              Vraag een offerte aan
             </a>
             <a href="#projecten" className="btn btn-ghost">
               Bekijk projecten
